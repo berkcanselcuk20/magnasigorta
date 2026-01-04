@@ -1,154 +1,152 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <!-- TEMEL -->
-    <meta charset="UTF-8">
-    <title>Berkcan Selçuk | Denizli & Türkiye Geneli Sigorta Danışmanı – Magna Sigorta</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Berkcan Selçuk | Denizli & Türkiye Geneli Sigorta Danışmanı – Magna Sigorta</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO (GOOGLE İÇİN ÇOK ÖNEMLİ) -->
-    <meta name="description" content="Berkcan Selçuk – Denizli merkezli, Türkiye geneli trafik, kasko, DASK, konut, sağlık, işyeri ve seyahat sigortası danışmanlığı. Hızlı teklif, WhatsApp üzerinden güvenilir hizmet.">
-    <meta name="keywords" content="Denizli sigorta, trafik sigortası, kasko sigortası, DASK, konut sigortası, sağlık sigortası, işyeri sigortası, seyahat sigortası, Berkcan Selçuk, Magna Sigorta">
-    <meta name="author" content="Berkcan Selçuk">
+<!-- SEO -->
+<meta name="description" content="Berkcan Selçuk – Denizli merkezli, Türkiye geneli trafik, kasko, DASK, konut, sağlık, işyeri ve seyahat sigortası danışmanlığı. WhatsApp üzerinden hızlı teklif.">
+<meta name="keywords" content="Denizli sigorta, trafik sigortası, kasko, DASK, konut sigortası, sağlık sigortası, Berkcan Selçuk, Magna Sigorta">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Berkcan Selçuk">
 
-    <!-- GOOGLE -->
-    <meta name="robots" content="index, follow">
+<style>
+*{
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-    <!-- SOSYAL PAYLAŞIM (Instagram / WhatsApp) -->
-    <meta property="og:title" content="Berkcan Selçuk | Magna Sigorta">
-    <meta property="og:description" content="Denizli & Türkiye Geneli Sigorta Hizmeti – Trafik, Kasko, DASK, Konut, Sağlık ve İşyeri Sigortaları">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="tr_TR">
+body{
+    margin:0;
+    min-height:100vh;
+    background:linear-gradient(135deg,#0b2c4d,#174a7e);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+}
 
-    <!-- CSS (TEK DOSYA İÇİN GÖMÜLÜ) -->
-    <style>
-        * {
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
-        }
+.card{
+    width:100%;
+    max-width:430px;
+    background:linear-gradient(180deg,#0f3d66,#1b5f99);
+    border-radius:22px;
+    padding:24px;
+    box-shadow:0 25px 45px rgba(0,0,0,.35);
+    text-align:center;
+}
 
-        body {
-            margin: 0;
-            min-height: 100vh;
-            background: linear-gradient(135deg, #0f2a44, #1e5fa3);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+h1{
+    font-size:26px;
+    margin:10px 0 4px;
+}
 
-        .card {
-            background: linear-gradient(180deg, #0d3b66, #1b6ca8);
-            width: 100%;
-            max-width: 430px;
-            padding: 25px;
-            border-radius: 22px;
-            color: #fff;
-            text-align: center;
-            box-shadow: 0 25px 45px rgba(0,0,0,0.35);
-        }
+h2{
+    font-size:14px;
+    font-weight:normal;
+    opacity:.85;
+    margin-bottom:15px;
+}
 
-        h1 {
-            margin: 10px 0 5px;
-            font-size: 26px;
-        }
+.info{
+    background:rgba(255,255,255,.10);
+    padding:15px;
+    border-radius:16px;
+    margin-bottom:18px;
+}
 
-        h2 {
-            font-size: 14px;
-            font-weight: normal;
-            opacity: 0.9;
-        }
+.info h3{
+    margin:0 0 8px;
+    font-size:16px;
+}
 
-        .description {
-            background: rgba(255,255,255,0.12);
-            padding: 15px;
-            border-radius: 16px;
-            margin: 20px 0;
-        }
+.info p{
+    font-size:14px;
+    line-height:1.5;
+    opacity:.95;
+}
 
-        .description h3 {
-            margin-top: 0;
-            font-size: 16px;
-        }
+/* SERVİSLER */
+.services{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin-bottom:22px;
+}
 
-        .description p {
-            font-size: 14px;
-            line-height: 1.5;
-            opacity: 0.95;
-        }
+.service{
+    background:rgba(255,255,255,.14);
+    padding:12px;
+    border-radius:14px;
+    text-decoration:none;
+    color:#fff;
+    font-size:14px;
+    transition:.3s;
+}
 
-        .services {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-        }
+.service:hover{
+    background:rgba(255,255,255,.25);
+    transform:translateY(-2px);
+}
 
-        .service {
-            background: rgba(255,255,255,0.18);
-            padding: 12px;
-            border-radius: 14px;
-            color: #fff;
-            text-decoration: none;
-            font-size: 14px;
-            transition: 0.3s;
-        }
+/* ALT BUTONLAR */
+.actions{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+    margin-bottom:18px;
+}
 
-        .service:hover {
-            background: rgba(255,255,255,0.3);
-            transform: scale(1.03);
-        }
+.btn{
+    background:rgba(255,255,255,.18);
+    padding:14px 6px;
+    border-radius:16px;
+    color:#fff;
+    text-decoration:none;
+    font-size:13px;
+    font-weight:600;
+    transition:.3s;
+}
 
-        .actions {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
-            margin: 25px 0;
-        }
+.btn:hover{
+    background:rgba(255,255,255,.3);
+}
 
-        .btn {
-            padding: 14px 6px;
-            border-radius: 16px;
-            color: #fff;
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: bold;
-        }
+/* ALT */
+.mail{
+    font-size:14px;
+    opacity:.9;
+    margin-bottom:6px;
+}
 
-        .whatsapp { background: #25D366; }
-        .phone { background: #1e90ff; }
-        .location { background: #ff4b4b; }
-        .instagram { background: linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); }
-
-        .mail {
-            font-size: 14px;
-            opacity: 0.9;
-            margin-bottom: 10px;
-        }
-
-        footer {
-            font-size: 12px;
-            opacity: 0.6;
-        }
-    </style>
+footer{
+    font-size:12px;
+    opacity:.6;
+}
+</style>
 </head>
 
 <body>
 
 <div class="card">
 
+    <img src="https://www.magnasigorta.com.tr/assets/images/logo.png" alt="Magna Sigorta" style="max-width:140px;margin-bottom:10px;">
+
     <h1>Berkcan Selçuk</h1>
     <h2>Sigorta Danışmanı | Magna Sigorta</h2>
 
-    <div class="description">
+    <div class="info">
         <h3>Denizli & Türkiye Geneli Sigorta Hizmeti</h3>
         <p>
             Denizli merkezli olmak üzere Türkiye genelinde bireysel ve kurumsal
             müşterilere trafik, kasko, DASK, konut, sağlık, işyeri ve seyahat
-            sigortalarında danışmanlık hizmeti sunuyorum.
+            sigortalarında danışmanlık sunuyorum.
             Tüm işlemler WhatsApp ve telefon üzerinden hızlı ve güvenli şekilde yapılır.
         </p>
     </div>
 
-    <!-- SERVİS LİNKLERİ (AYNEN KORUNDU) -->
+    <!-- SERVİSLER (KORUNDU) -->
     <section class="services">
         <a class="service" href="https://wa.me/905459173353?text=Trafik%20sigortası%20hakkında%20bilgi%20almak%20istiyorum.">🚗 Trafik Sigortası</a>
         <a class="service" href="https://wa.me/905459173353?text=Kasko%20sigortası%20teklifi%20almak%20istiyorum.">🚘 Kasko Sigortası</a>
@@ -160,14 +158,14 @@
     </section>
 
     <div class="actions">
-        <a class="btn whatsapp" href="https://wa.me/905459173353">WhatsApp</a>
-        <a class="btn phone" href="tel:+905459173353">Ara</a>
-        <a class="btn location" href="#">Adres</a>
-        <a class="btn instagram" href="https://instagram.com/">Instagram</a>
+        <a class="btn" href="https://wa.me/905459173353">WhatsApp</a>
+        <a class="btn" href="tel:+905459173353">Ara</a>
+        <a class="btn" href="#">Adres</a>
+        <a class="btn" href="https://instagram.com/">Instagram</a>
     </div>
 
     <div class="mail">
-        📧 berkcanselcuk2@gmail.com
+        📧 berkcanselcuk20@gmail.com
     </div>
 
     <footer>
