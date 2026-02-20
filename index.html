@@ -3,14 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Denizli Sigorta | Berkcan Selçuk – Magna Sigorta</title>
 
 <meta name="description" content="Denizli Sigorta Danışmanı Berkcan Selçuk. Trafik, Kasko, DASK, Konut, Sağlık, İşyeri sigortaları. WhatsApp’tan hızlı teklif.">
 <meta name="keywords" content="Denizli Sigorta, Trafik Sigortası, Kasko, DASK, Berkcan Selçuk, Magna Sigorta">
 <meta name="robots" content="index, follow">
 
-<!-- Font Awesome (ikonlar için) -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -22,7 +20,7 @@ font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-background:#1A313A;
+background:linear-gradient(to bottom,#1f3b4d,#0f2a3a);
 color:#ffffff;
 min-height:100vh;
 display:flex;
@@ -32,43 +30,70 @@ align-items:center;
 
 .container{
 width:100%;
-max-width:900px;
+max-width:1000px;
 padding:40px 20px;
 text-align:center;
 }
 
-/* LOGO */
-.logo{
-width:220px;
-margin-bottom:15px;
-display:block;
-margin-left:auto;
-margin-right:auto;
-}
-
-/* TEXT */
 h1{
-font-size:32px;
+font-size:34px;
 margin-bottom:5px;
 }
 
 h2{
-font-size:16px;
+font-size:17px;
 font-weight:normal;
 opacity:0.8;
 margin-bottom:30px;
 }
 
-/* INFO */
 .info{
 background:rgba(255,255,255,0.08);
 padding:25px;
 border-radius:20px;
-margin-bottom:35px;
+margin-bottom:40px;
 line-height:1.6;
 }
 
-/* SERVICES GRID */
+/* WHY US */
+.why{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+margin-bottom:50px;
+}
+
+.why-box{
+background:rgba(255,255,255,0.10);
+padding:20px;
+border-radius:18px;
+width:220px;
+transition:0.3s;
+}
+
+.why-box:hover{
+background:rgba(255,255,255,0.20);
+transform:translateY(-5px);
+}
+
+.why-box i{
+font-size:28px;
+margin-bottom:10px;
+color:#4cc9f0;
+}
+
+.why-box h3{
+font-size:16px;
+margin-bottom:6px;
+}
+
+.why-box p{
+font-size:14px;
+opacity:0.8;
+}
+
+/* SERVICES */
 .services{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
@@ -89,10 +114,10 @@ transition:0.3s;
 background:rgba(255,255,255,0.25);
 }
 
-/* ACTION BUTTONS */
+/* ACTIONS */
 .actions{
 display:grid;
-grid-template-columns:repeat(4,1fr);
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
 gap:15px;
 margin-bottom:30px;
 }
@@ -126,21 +151,10 @@ transform:translateY(-4px);
 opacity:0.95;
 }
 
-/* MAIL */
-.mail{
-margin-bottom:20px;
-}
-
-.mail a{
-color:#ffffff;
-text-decoration:none;
-font-size:15px;
-}
-
-/* FOOTER */
 footer{
 opacity:0.6;
 font-size:13px;
+margin-top:20px;
 }
 </style>
 </head>
@@ -149,56 +163,57 @@ font-size:13px;
 
 <div class="container">
 
-<!-- LOGO -->
-<img src="logo.png?v=3" class="logo" alt="Magna Sigorta Logo">
-
 <h1>Berkcan Selçuk</h1>
 <h2>Sigorta Danışmanı | Magna Sigorta</h2>
 
 <div class="info">
 <strong>Denizli & Türkiye Geneli Sigorta Hizmeti</strong><br><br>
-Denizli merkezli olmak üzere tüm Türkiye'de bireysel ve kurumsal müşterilere
-trafik, kasko, DASK, konut, sağlık, işyeri ve seyahat sigortası danışmanlığı sunuyorum.
-Tüm işlemler WhatsApp ve telefon üzerinden hızlı ve güvenli şekilde yapılır.
+Trafik, Kasko, DASK, Konut, Sağlık ve İşyeri sigortalarında hızlı, güvenilir ve profesyonel danışmanlık hizmeti sunuyorum.
+</div>
+
+<div class="why">
+<div class="why-box">
+<i class="fa-solid fa-clock"></i>
+<h3>7/24 Destek</h3>
+<p>Her zaman yanınızdayız.</p>
+</div>
+
+<div class="why-box">
+<i class="fa-solid fa-bolt"></i>
+<h3>Hızlı Teklif</h3>
+<p>Dakikalar içinde fiyat alın.</p>
+</div>
+
+<div class="why-box">
+<i class="fa-solid fa-shield-halved"></i>
+<h3>Uzman Kadro</h3>
+<p>Deneyimli ve güvenilir danışmanlık.</p>
+</div>
 </div>
 
 <section class="services">
 <a class="service" href="https://wa.me/905459173353?text=Trafik%20sigortası%20bilgi%20almak%20istiyorum.">🚗 Trafik Sigortası</a>
 <a class="service" href="https://wa.me/905459173353?text=Kasko%20teklifi%20almak%20istiyorum.">🚘 Kasko Sigortası</a>
 <a class="service" href="https://wa.me/905459173353?text=DASK%20sigortası%20bilgi%20almak%20istiyorum.">🏠 DASK Sigortası</a>
-<a class="service" href="https://wa.me/905459173353?text=Konut%20sigortası%20bilgi%20almak%20istiyorum.">🏡 Konut Sigortası</a>
-<a class="service" href="https://wa.me/905459173353?text=İşyeri%20sigortası%20bilgi%20almak%20istiyorum.">🏢 İşyeri Sigortası</a>
 <a class="service" href="https://wa.me/905459173353?text=Sağlık%20sigortası%20bilgi%20almak%20istiyorum.">🏥 Sağlık Sigortası</a>
-<a class="service" href="https://wa.me/905459173353?text=Seyahat%20sigortası%20bilgi%20almak%20istiyorum.">✈️ Seyahat Sigortası</a>
-<a class="service" href="https://wa.me/905459173353?text=Diğer%20sigortalar%20hakkında%20bilgi%20istiyorum.">🛡️ Diğer Sigortalar</a>
 </section>
 
 <div class="actions">
-
 <a class="action whatsapp" href="https://wa.me/905459173353">
-<i class="fa-brands fa-whatsapp"></i>
-WhatsApp
+<i class="fa-brands fa-whatsapp"></i>WhatsApp
 </a>
 
 <a class="action phone" href="tel:+905459173353">
-<i class="fa-solid fa-phone"></i>
-Ara
+<i class="fa-solid fa-phone"></i>Ara
 </a>
 
 <a class="action map" href="https://www.google.com/maps/search/Denizli+Sigorta" target="_blank">
-<i class="fa-solid fa-location-dot"></i>
-Adres
+<i class="fa-solid fa-location-dot"></i>Adres
 </a>
 
 <a class="action instagram" href="https://www.instagram.com/magnasigorta/" target="_blank">
-<i class="fa-brands fa-instagram"></i>
-Instagram
+<i class="fa-brands fa-instagram"></i>Instagram
 </a>
-
-</div>
-
-<div class="mail">
-📧 <a href="mailto:berkcanselcuk20@gmail.com">berkcanselcuk20@gmail.com</a>
 </div>
 
 <footer>
