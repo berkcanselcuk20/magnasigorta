@@ -4,125 +4,208 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Magna Sigorta | Denizli Sigorta</title>
+<title>Denizli Sigorta | Berkcan Selçuk – Magna Sigorta</title>
 
-<meta name="description" content="Denizli Sigorta hizmetleri. Magna Sigorta ile trafik, kasko, sağlık ve konut sigortası çözümleri.">
-<meta name="keywords" content="Denizli Sigorta, Magna Sigorta, Berkcan Selçuk, trafik sigortası, kasko">
+<meta name="description" content="Denizli Sigorta Danışmanı Berkcan Selçuk. Trafik, Kasko, DASK, Konut, Sağlık, İşyeri sigortaları. WhatsApp’tan hızlı teklif.">
+<meta name="keywords" content="Denizli Sigorta, Trafik Sigortası, Kasko, DASK, Berkcan Selçuk, Magna Sigorta">
+<meta name="robots" content="index, follow">
 
-<!-- Google Search Console kodunu buraya yapıştıracaksın -->
-<!-- <meta name="google-site-verification" content="BURAYA_KOD_GELECEK" /> -->
-
-<!-- FONT AWESOME (Gerçek ikonlar için) -->
+<!-- Font Awesome (ikonlar için) -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-    background:#0f172a;
-    color:white;
-    text-align:center;
+background:#1A313A;
+color:#ffffff;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
 }
 
-header{
-    padding:40px 20px;
+.container{
+width:100%;
+max-width:900px;
+padding:40px 20px;
+text-align:center;
 }
 
+/* LOGO */
 .logo{
-    width:180px;
-    margin-bottom:20px;
+width:220px;
+margin-bottom:15px;
+display:block;
+margin-left:auto;
+margin-right:auto;
 }
 
+/* TEXT */
 h1{
-    font-size:28px;
-    margin-bottom:10px;
+font-size:32px;
+margin-bottom:5px;
 }
 
-p{
-    opacity:0.8;
-    margin-bottom:30px;
+h2{
+font-size:16px;
+font-weight:normal;
+opacity:0.8;
+margin-bottom:30px;
 }
 
-.buttons{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-    width:90%;
-    max-width:400px;
-    margin:0 auto 40px auto;
+/* INFO */
+.info{
+background:rgba(255,255,255,0.08);
+padding:25px;
+border-radius:20px;
+margin-bottom:35px;
+line-height:1.6;
 }
 
-.btn{
-    padding:15px;
-    border-radius:10px;
-    text-decoration:none;
-    font-weight:bold;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:10px;
-    transition:0.3s;
+/* SERVICES GRID */
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
+margin-bottom:40px;
 }
 
-.phone{ background:#2563eb; color:white; }
-.map{ background:#16a34a; color:white; }
-.whatsapp{ background:#25d366; color:white; }
-.instagram{ background:#e1306c; color:white; }
-
-.btn:hover{
-    transform:scale(1.05);
+.service{
+background:rgba(255,255,255,0.12);
+padding:15px;
+border-radius:15px;
+text-decoration:none;
+color:#fff;
+transition:0.3s;
 }
 
+.service:hover{
+background:rgba(255,255,255,0.25);
+}
+
+/* ACTION BUTTONS */
+.actions{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+margin-bottom:30px;
+}
+
+.action{
+height:95px;
+border-radius:20px;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-decoration:none;
+color:#fff;
+font-weight:bold;
+font-size:15px;
+transition:0.3s;
+}
+
+.action i{
+font-size:28px;
+margin-bottom:8px;
+}
+
+.whatsapp{background:#25D366;}
+.phone{background:#2563eb;}
+.map{background:#ef4444;}
+.instagram{background:linear-gradient(135deg,#f58529,#dd2a7b,#8134af);}
+
+.action:hover{
+transform:translateY(-4px);
+opacity:0.95;
+}
+
+/* MAIL */
+.mail{
+margin-bottom:20px;
+}
+
+.mail a{
+color:#ffffff;
+text-decoration:none;
+font-size:15px;
+}
+
+/* FOOTER */
 footer{
-    padding:20px;
-    font-size:14px;
-    opacity:0.6;
+opacity:0.6;
+font-size:13px;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-    <!-- LOGO -->
-    <img src="logo.png?v=2" alt="Magna Sigorta Logo" class="logo">
+<div class="container">
 
-    <h1>Magna Sigorta</h1>
-    <p>Denizli Sigorta Hizmetleri</p>
-</header>
+<!-- LOGO -->
+<img src="logo.png?v=3" class="logo" alt="Magna Sigorta Logo">
 
-<div class="buttons">
+<h1>Berkcan Selçuk</h1>
+<h2>Sigorta Danışmanı | Magna Sigorta</h2>
 
-    <a href="tel:05459173353" class="btn phone">
-        <i class="fa-solid fa-phone"></i>
-        0545 917 33 53
-    </a>
+<div class="info">
+<strong>Denizli & Türkiye Geneli Sigorta Hizmeti</strong><br><br>
+Denizli merkezli olmak üzere tüm Türkiye'de bireysel ve kurumsal müşterilere
+trafik, kasko, DASK, konut, sağlık, işyeri ve seyahat sigortası danışmanlığı sunuyorum.
+Tüm işlemler WhatsApp ve telefon üzerinden hızlı ve güvenli şekilde yapılır.
+</div>
 
-    <a href="https://www.google.com/maps/search/?api=1&query=Denizli+Sigorta" target="_blank" class="btn map">
-        <i class="fa-solid fa-location-dot"></i>
-        Adres / Google Harita
-    </a>
+<section class="services">
+<a class="service" href="https://wa.me/905459173353?text=Trafik%20sigortası%20bilgi%20almak%20istiyorum.">🚗 Trafik Sigortası</a>
+<a class="service" href="https://wa.me/905459173353?text=Kasko%20teklifi%20almak%20istiyorum.">🚘 Kasko Sigortası</a>
+<a class="service" href="https://wa.me/905459173353?text=DASK%20sigortası%20bilgi%20almak%20istiyorum.">🏠 DASK Sigortası</a>
+<a class="service" href="https://wa.me/905459173353?text=Konut%20sigortası%20bilgi%20almak%20istiyorum.">🏡 Konut Sigortası</a>
+<a class="service" href="https://wa.me/905459173353?text=İşyeri%20sigortası%20bilgi%20almak%20istiyorum.">🏢 İşyeri Sigortası</a>
+<a class="service" href="https://wa.me/905459173353?text=Sağlık%20sigortası%20bilgi%20almak%20istiyorum.">🏥 Sağlık Sigortası</a>
+<a class="service" href="https://wa.me/905459173353?text=Seyahat%20sigortası%20bilgi%20almak%20istiyorum.">✈️ Seyahat Sigortası</a>
+<a class="service" href="https://wa.me/905459173353?text=Diğer%20sigortalar%20hakkında%20bilgi%20istiyorum.">🛡️ Diğer Sigortalar</a>
+</section>
 
-    <a href="https://wa.me/905459173353" target="_blank" class="btn whatsapp">
-        <i class="fa-brands fa-whatsapp"></i>
-        WhatsApp
-    </a>
+<div class="actions">
 
-    <a href="https://instagram.com/magnasigorta" target="_blank" class="btn instagram">
-        <i class="fa-brands fa-instagram"></i>
-        Instagram
-    </a>
+<a class="action whatsapp" href="https://wa.me/905459173353">
+<i class="fa-brands fa-whatsapp"></i>
+WhatsApp
+</a>
+
+<a class="action phone" href="tel:+905459173353">
+<i class="fa-solid fa-phone"></i>
+Ara
+</a>
+
+<a class="action map" href="https://www.google.com/maps/search/Denizli+Sigorta" target="_blank">
+<i class="fa-solid fa-location-dot"></i>
+Adres
+</a>
+
+<a class="action instagram" href="https://www.instagram.com/magnasigorta/" target="_blank">
+<i class="fa-brands fa-instagram"></i>
+Instagram
+</a>
 
 </div>
 
+<div class="mail">
+📧 <a href="mailto:berkcanselcuk20@gmail.com">berkcanselcuk20@gmail.com</a>
+</div>
+
 <footer>
-© 2026 Magna Sigorta | Denizli Sigorta
+© Berkcan Selçuk – Türkiye Geneli Sigorta Acenteliği
 </footer>
+
+</div>
 
 </body>
 </html>
