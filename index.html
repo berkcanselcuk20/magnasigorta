@@ -4,7 +4,24 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Denizli Sigorta | Berkcan Selçuk</title>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<!-- FACEBOOK PIXEL -->
+<script>
+!function(f,b,e,v,n,t,s){
+if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', 'PIXEL_ID_BURAYA'); 
+fbq('track', 'PageView');
+</script>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
@@ -19,7 +36,6 @@ text-align:center;
 overflow:hidden;
 }
 
-/* Animated Stars */
 body::before{
 content:"";
 position:fixed;
@@ -37,7 +53,6 @@ to{transform:translate(-500px,-500px);}
 }
 
 .container{max-width:850px;padding:20px;}
-
 h1{font-size:38px;margin-bottom:8px;}
 .subtitle{opacity:0.7;margin-bottom:25px;}
 .main-text{font-size:26px;font-weight:600;}
@@ -52,7 +67,6 @@ font-weight:bold;
 border:none;
 cursor:pointer;
 color:white;
-position:relative;
 box-shadow:0 0 20px rgba(0,150,255,0.6);
 animation:pulse 2s infinite;
 transition:0.3s;
@@ -63,8 +77,6 @@ transition:0.3s;
 50%{box-shadow:0 0 40px rgba(0,150,255,1);}
 100%{box-shadow:0 0 20px rgba(0,150,255,0.6);}
 }
-
-.cta:hover{transform:translateY(-4px);}
 
 .features{
 margin-top:60px;
@@ -82,12 +94,22 @@ opacity:0.9;
 margin-top:60px;
 display:flex;
 flex-direction:column;
-gap:10px;
-opacity:0.9;
+gap:12px;
 font-size:14px;
 }
 
-.contact a{color:#fff;text-decoration:none;}
+.contact a{
+background:rgba(255,255,255,0.08);
+padding:10px;
+border-radius:12px;
+text-decoration:none;
+color:#fff;
+transition:0.3s;
+}
+
+.contact a:hover{
+background:rgba(255,255,255,0.2);
+}
 
 footer{
 margin-top:20px;
@@ -137,23 +159,21 @@ transition:0.3s;
 
 .option:hover{
 background:rgba(255,255,255,0.25);
-transform:translateY(-3px);
 }
 
-/* FORM */
 form{
 display:none;
 flex-direction:column;
 gap:12px;
 }
 
-input,select,button{
+input,button{
 padding:10px;
 border-radius:10px;
 border:none;
 }
 
-input,select{
+input{
 background:rgba(255,255,255,0.1);
 color:#fff;
 }
@@ -164,22 +184,14 @@ color:#fff;
 font-weight:bold;
 cursor:pointer;
 }
-
-.close{
-margin-top:15px;
-cursor:pointer;
-opacity:0.7;
-}
 </style>
 </head>
 
 <body>
 
 <div class="container">
-
 <h1>Berkcan Selçuk</h1>
 <div class="subtitle">Sigorta Danışmanı | Magna Sigorta</div>
-
 <div class="main-text">Denizli & Türkiye Geneli Sigorta Çözümleri</div>
 <div class="small-text">2 Dakikada Hızlı Teklif Al</div>
 
@@ -195,70 +207,74 @@ opacity:0.7;
 </div>
 
 <div class="contact">
-<a href="tel:+905459173353"><i class="fa-solid fa-phone"></i> 0545 917 33 53</a>
-<a href="https://wa.me/905459173353"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-<a href="https://www.google.com/maps/search/Denizli+Sigorta" target="_blank"><i class="fa-solid fa-location-dot"></i> Denizli</a>
-<a href="mailto:berkcanselcuk20@gmail.com"><i class="fa-solid fa-envelope"></i> berkcanselcuk20@gmail.com</a>
+<a href="https://maps.google.com/maps?hl=tr&gl=tr&um=1&ie=UTF-8&fb=1&sa=X&ftid=0x4321fe298bc47223:0xe3db015916da4662" target="_blank">
+<i class="fa-solid fa-location-dot"></i> Ofis Konumunu Gör
+</a>
 </div>
 
 <footer>© Berkcan Selçuk – Türkiye Geneli Sigorta Acenteliği</footer>
-
 </div>
 
-<!-- MODAL -->
 <div class="modal" id="modal">
 <div class="modal-content">
-
 <h2>Sigorta Türü Seçin</h2>
 
 <div class="options" id="options">
-<div class="option" onclick="selectType('Trafik Sigortası')">🚗 Trafik Sigortası</div>
-<div class="option" onclick="selectType('Kasko Sigortası')">🚘 Kasko Sigortası</div>
-<div class="option" onclick="selectType('Sağlık Sigortası')">🏥 Sağlık Sigortası</div>
-<div class="option" onclick="selectType('DASK Sigortası')">🏠 DASK Sigortası</div>
-<div class="option" onclick="selectType('Konut Sigortası')">🏡 Konut Sigortası</div>
-<div class="option" onclick="selectType('İşyeri Sigortası')">🏢 İşyeri Sigortası</div>
-<div class="option" onclick="selectType('Seyahat Sigortası')">✈️ Seyahat Sigortası</div>
+<div class="option" onclick="selectType('Trafik Sigortası')">Trafik</div>
+<div class="option" onclick="selectType('Kasko Sigortası')">Kasko</div>
+<div class="option" onclick="selectType('Sağlık Sigortası')">Sağlık</div>
+<div class="option" onclick="selectType('DASK Sigortası')">DASK</div>
+<div class="option" onclick="selectType('Konut Sigortası')">Konut</div>
+<div class="option" onclick="selectType('İşyeri Sigortası')">İşyeri</div>
+<div class="option" onclick="selectType('Seyahat Sigortası')">Seyahat</div>
 </div>
 
 <form id="quoteForm">
 <input type="text" id="type" readonly>
-<input type="text" placeholder="Ad Soyad" required>
-<input type="tel" placeholder="Telefon Numaranız" required>
+<input type="text" id="name" placeholder="Ad Soyad" required>
+<input type="tel" id="phone" placeholder="Telefon" required>
 <button type="submit">Teklif Gönder</button>
 </form>
-
-<div class="close" onclick="closeModal()">Vazgeç</div>
 
 </div>
 </div>
 
 <script>
+emailjs.init("EMAILJS_PUBLIC_KEY_BURAYA");
+
 function openModal(){
 document.getElementById("modal").style.display="flex";
-}
-
-function closeModal(){
-document.getElementById("modal").style.display="none";
 }
 
 function selectType(type){
 document.getElementById("options").style.display="none";
 document.getElementById("quoteForm").style.display="flex";
-document.getElementById("type").value = type;
+document.getElementById("type").value=type;
 }
 
 document.getElementById("quoteForm").addEventListener("submit",function(e){
 e.preventDefault();
+
 let data={
 type:document.getElementById("type").value,
-date:new Date().toLocaleString()
+name:document.getElementById("name").value,
+phone:document.getElementById("phone").value
 };
-let leads=JSON.parse(localStorage.getItem("leads")||"[]");
-leads.push(data);
-localStorage.setItem("leads",JSON.stringify(leads));
+
+// EMAILJS
+emailjs.send("SERVICE_ID","TEMPLATE_ID",data);
+
+// GOOGLE SHEETS WEBHOOK
+fetch("GOOGLE_SCRIPT_WEBHOOK_URL",{
+method:"POST",
+body:JSON.stringify(data)
+});
+
+// FACEBOOK CONVERSION
+fbq('track','Lead');
+
 alert("Talebiniz alındı. En kısa sürede dönüş yapılacaktır.");
-closeModal();
+location.reload();
 });
 </script>
 
